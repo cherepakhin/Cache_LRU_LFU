@@ -10,6 +10,7 @@ public class CacheManager<K, V> {
         }
         switch (typeCache) {
             case LFU:
+                cache = new CacheLFU<>(size);
                 break;
             case LRU:
                 cache = new CacheLRU<>(size);

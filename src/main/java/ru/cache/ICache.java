@@ -2,7 +2,8 @@ package ru.cache;
 
 public interface ICache<K, V> {
     /**
-     *  Положить объект в кеш
+     * Положить объект в кеш
+     *
      * @param key ключ
      * @param val значение
      */
@@ -10,6 +11,7 @@ public interface ICache<K, V> {
 
     /**
      * Получить значение из кеша по ключу
+     *
      * @param key ключ
      * @return сохраненный объект. Null если не найдено.
      */

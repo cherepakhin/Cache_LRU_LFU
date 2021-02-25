@@ -1,4 +1,4 @@
-package ru;
+package ru.cache;
 
 import org.junit.Before;
 import org.junit.Test;

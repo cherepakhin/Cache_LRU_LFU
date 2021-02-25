@@ -1,4 +1,4 @@
-package ru;
+package ru.cache;
 
 import org.junit.Test;
 import ru.cache.LinkedHashMapLRU;
