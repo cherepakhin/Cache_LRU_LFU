@@ -2,18 +2,17 @@ package ru.cache;
 
 import org.junit.Before;
 import org.junit.Test;
-import ru.cache.CacheLRU;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
 public class CacheLRUTest {
-    private final int SIZE = 2;
+    int SIZE = 2;
     Integer KEY_FIRST = 0;
     String VALUE_FIRST = "VALUE_FIRST";
     Integer KEY_LAST = 1;
     String VALUE_LAST = "VALUE_LAST";
-    private CacheLRU<Object, Object> cache;
+    CacheLRU<Object, Object> cache;
 
     @Before
     public void setUp() {

@@ -7,9 +7,9 @@ import java.util.TreeMap;
 
 public class CacheLFU<K, V> implements ICache<K, V> {
     private final int maxSize;
-    HashMap<K, V> cache; // хранилище
-    HashMap<K, Integer> keyFreq; // частота использования ключа
-    TreeMap<Integer, LinkedHashSet<K>> sortedFreq; // ключи, отсортированные по частоте
+    private final HashMap<K, V> cache; // хранилище
+    private final HashMap<K, Integer> keyFreq; // частота использования ключа
+    private final TreeMap<Integer, LinkedHashSet<K>> sortedFreq; // ключи, отсортированные по частоте
 
     public CacheLFU(int maxSize) {
         this.maxSize = maxSize;

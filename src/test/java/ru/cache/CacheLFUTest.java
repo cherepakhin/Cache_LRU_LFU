@@ -3,7 +3,8 @@ package ru.cache;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 public class CacheLFUTest {
 
@@ -35,21 +36,6 @@ public class CacheLFUTest {
     public void simplePutGet() {
         cache.put(KEY_FIRST, VALUE_FIRST);
         cache.put(KEY_LAST, VALUE_LAST);
-
-        assertTrue(cache.keyFreq.containsKey(KEY_FIRST));
-        assertEquals(Integer.valueOf(1), cache.keyFreq.get(KEY_FIRST));
-
-        assertTrue(cache.keyFreq.containsKey(KEY_LAST));
-        assertEquals(Integer.valueOf(1), cache.keyFreq.get(KEY_LAST));
-
-        assertEquals(2, cache.cache.size());
-        assertEquals(2, cache.keyFreq.size());
-        assertEquals(1, cache.sortedFreq.size());
-        assertTrue(cache.sortedFreq.get(1).contains(KEY_FIRST));
-        assertTrue(cache.sortedFreq.get(1).contains(KEY_LAST));
-
-        assertTrue(cache.cache.containsKey(KEY_FIRST));
-        assertTrue(cache.cache.containsKey(KEY_LAST));
 
         assertEquals(VALUE_FIRST, cache.get(KEY_FIRST));
         assertEquals(VALUE_LAST, cache.get(KEY_LAST));

@@ -1,7 +1,6 @@
 package ru.cache;
 
 import org.junit.Test;
-import ru.cache.LinkedHashMapLRU;
 
 import static org.junit.Assert.*;
 
@@ -35,7 +34,7 @@ public class LinkedHashMapLRUTest {
     public void putForNullKey() {
         LinkedHashMapLRU<Integer, String> mapLRU = new LinkedHashMapLRU<>(1);
         String VALUE = "VALUE";
-        mapLRU.put(null,VALUE);
-        assertEquals(VALUE,mapLRU.get(null));
+        mapLRU.put(null, VALUE);
+        assertEquals(VALUE, mapLRU.get(null));
     }
 }
